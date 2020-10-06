@@ -13,7 +13,7 @@ pts = pts.transpose().reshape(2,313,1,1)
 net.getLayer(class8).blobs = [pts.astype("float32")]
 net.getLayer(conv8).blobs = [np.full([1,313],2.606,dtype='float32')]
 
-image = cv2.imread('./Image/Dadu_Jabbalpur_Colorised_22.jpg')
+image = cv2.imread('./Image/<write the file name of your image>')
 scaled = image.astype("float32")/255.0
 lab = cv2.cvtColor(scaled,cv2.COLOR_BGR2LAB)
 
